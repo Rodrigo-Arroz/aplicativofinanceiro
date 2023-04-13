@@ -16,6 +16,16 @@
       <li><a href="#renda-variavel">Renda Variável</a></li>
     </ul>
   </nav>
+  <section id="login">
+    <h2>Login</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha">
+      <input type="submit" value="Entrar">
+    </form>
+  </section>
   <section id="fundos-imobiliarios">
     <h2>Fundos Imobiliários</h2>
     <!-- Coloque a lista de fundos imobiliários aqui -->
