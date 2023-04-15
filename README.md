@@ -8,17 +8,9 @@
     <!-- Coloque o seu logo aqui -->
     <h1>Meu Aplicativo de Investimentos</h1>
   </header>
-  <nav>
-    <!-- Coloque o seu menu de navegação aqui -->
-    <ul>
-      <li><a href="#fundos-imobiliarios">Fundos Imobiliários</a></li>
-      <li><a href="#renda-fixa">Renda Fixa</a></li>
-      <li><a href="#renda-variavel">Renda Variável</a></li>
-    </ul>
-  </nav>
   <section id="login">
     <h2>Login</h2>
-    <form>
+    <form id="login-form">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email">
       <label for="senha">Senha:</label>
@@ -26,7 +18,7 @@
       <input type="submit" value="Entrar">
     </form>
   </section>
-  <section id="fundos-imobiliarios">
+  <section id="fundos-imobiliarios" style="display: none;">
     <h2>Fundos Imobiliários</h2>
     <!-- Coloque a lista de fundos imobiliários aqui -->
     <ul>
@@ -35,7 +27,7 @@
       <!-- Outros fundos imobiliários -->
     </ul>
   </section>
-  <section id="renda-fixa">
+  <section id="renda-fixa" style="display: none;">
     <h2>Renda Fixa</h2>
     <!-- Coloque a lista de opções de renda fixa aqui -->
     <ul>
@@ -44,7 +36,7 @@
       <!-- Outras opções de renda fixa -->
     </ul>
   </section>
-  <section id="renda-variavel">
+  <section id="renda-variavel" style="display: none;">
     <h2>Renda Variável</h2>
     <!-- Coloque a lista de opções de renda variável aqui -->
     <ul>
@@ -57,5 +49,16 @@
     <!-- Coloque informações de rodapé aqui -->
     <p>Informações de rodapé</p>
   </footer>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Previne o envio do formulário
+      // Aqui você pode adicionar a lógica de verificação do login e senha
+      // Se o login for bem-sucedido, você pode mostrar as outras seções usando display: block;
+      document.getElementById('fundos-imobiliarios').style.display = 'block';
+      document.getElementById('renda-fixa').style.display = 'block';
+      document.getElementById('renda-variavel').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
